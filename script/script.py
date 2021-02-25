@@ -10,6 +10,7 @@ def main():
 
     # ALL THE FILES
     for file_name in file_names:
+        print(f'starting file {file_name}')
 
         # read in the input
         input: Input = in_reader.open_file(file_name=file_name)
@@ -60,6 +61,8 @@ def main():
 
         # write the output file in /data
         out_writer.write_file(file_name=file_name, input=submission)
+
+        print(f'done with file {file_name}')
 
 
 if __name__ == '__main__':

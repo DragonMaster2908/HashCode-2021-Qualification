@@ -48,7 +48,6 @@ def open_file(file_name: str) -> Input:
         # cars
         car_index = 0
         for input_index in range(nr_streets+1, len(lines)):
-            print(lines[input_index])
             car_line = lines[input_index].split(' ')
 
             car_id = car_index
@@ -79,8 +78,7 @@ def open_file(file_name: str) -> Input:
 
     # INTERSECTIONS
     for intersection_index in range(0, nr_intersections):
-        # 0 londres incoming, 1
-        # 1 amsterdam, athen, 2
+
         incoming_streets = []
         for street in streets:
             if street.finish == intersection_index:
@@ -93,8 +91,6 @@ def open_file(file_name: str) -> Input:
         )
 
         intersections.append(intersection)
-
-
 
     return input_data
 
